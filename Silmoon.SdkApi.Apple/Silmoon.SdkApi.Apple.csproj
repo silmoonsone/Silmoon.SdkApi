@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>annotations</Nullable>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <PackageId>Silmoon.SdkApi.Apple</PackageId>
+    <Version>0.0.1-alpha</Version>
+    <Authors>SILMOON</Authors>
+    <Company>SILMOON LLC</Company>
+    <Description>Silmoon SDK</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/silmoonsone/Silmoon.SdkApi</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/silmoonsone/Silmoon.SdkApi.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>silmoon</PackageTags>
+    <PackageIcon>logo.png</PackageIcon>
+    <PackageOutputPath>..\packages_out</PackageOutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\logo.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="Silmoon.Extension" Version="1.7.4" />
+    <PackageReference Include="BouncyCastle.NetCore" Version="2.2.1" />
+    <PackageReference Include="jose-jwt" Version="5.1.1" />
+  </ItemGroup>
+
+</Project>
