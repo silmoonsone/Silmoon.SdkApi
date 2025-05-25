@@ -8,7 +8,7 @@
 
   <PropertyGroup>
     <PackageId>Silmoon.SdkApi.Apple</PackageId>
-    <Version>0.0.1-alpha</Version>
+    <Version>0.0.1-alpha.1</Version>
     <Authors>SILMOON</Authors>
     <Company>SILMOON LLC</Company>
     <Description>Silmoon SDK</Description>
@@ -31,7 +31,6 @@
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="Silmoon.Extension" Version="1.7.4" />
-    <PackageReference Include="BouncyCastle.NetCore" Version="2.2.1" />
     <PackageReference Include="jose-jwt" Version="5.1.1" />
   </ItemGroup>
 

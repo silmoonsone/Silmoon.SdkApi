@@ -1,8 +1,6 @@
 ﻿using Jose;
 using Jose.keys;
 using Newtonsoft.Json.Linq;
-using Org.BouncyCastle.Crypto.Parameters;
-using Org.BouncyCastle.OpenSsl;
 using Silmoon.Models;
 using Silmoon.SdkApi.Models;
 using System;
@@ -18,7 +16,7 @@ namespace Silmoon.SdkApi.Warpper.Apple
 {
     public class ApplePushNotification
     {
-        public static string GetApplePushToken(string pushKeyId, string pushKey, string teamId)
+        static string GetApplePushToken(string pushKeyId, string pushKey, string teamId)
         {
             var epochNow = (int)DateTime.UtcNow.Subtract(new DateTime(1970, 1, 1)).TotalSeconds;
             var payload = new Dictionary<string, object>()
@@ -30,25 +28,30 @@ namespace Silmoon.SdkApi.Warpper.Apple
             {
                 {"kid", pushKeyId}
             };
-            var privateKey = GetApplePushPrivateKey(pushKey);
+            var privateKey = GetApplePushPrivateKey2(pushKey);
             return JWT.Encode(payload, privateKey, JwsAlgorithm.ES256, extraHeaders);
         }
-        public static CngKey GetApplePushPrivateKey(string keyFileContent)
+        public static ECDsa GetApplePushPrivateKey2(string keyFileContent)
         {
-            using MemoryStream ms = new MemoryStream(Encoding.UTF8.GetBytes(keyFileContent));
-            using StreamReader sr = new StreamReader(ms);
-            var ecPrivateKeyParameters = (ECPrivateKeyParameters)new PemReader(sr).ReadObject();
-            var x = ecPrivateKeyParameters.Parameters.G.AffineXCoord.GetEncoded();
-            var y = ecPrivateKeyParameters.Parameters.G.AffineYCoord.GetEncoded();
-            var d = ecPrivateKeyParameters.D.ToByteArrayUnsigned();
-            return EccKey.New(x, y, d);
+            const string header = "-----BEGIN PRIVATE KEY-----";
+            const string footer = "-----END PRIVATE KEY-----";
+
+            int start = keyFileContent.IndexOf(header) + header.Length;
+            int end = keyFileContent.IndexOf(footer, start);
+            string base64 = keyFileContent[start..end].Replace("\n", "").Replace("\r", "").Trim();
+
+            byte[] keyBytes = Convert.FromBase64String(base64);
+
+            var ecdsa = ECDsa.Create();
+            ecdsa.ImportPkcs8PrivateKey(keyBytes, out _);
+            return ecdsa;
         }
 
-        public async Task<StateSet<bool, HttpStatusCode>> PushRemoteNotification(ApplePush applePush, bool isTestApns, string pushKeyId, string pushKey, string teamId)
+        public static async Task<StateSet<bool, HttpStatusCode>> PushRemoteNotification(ApplePush applePush, bool isTestApns, string pushKeyId, string pushKey, string teamId)
         {
             using HttpClient httpClient = new HttpClient();
+            using HttpRequestMessage requestMessage = new HttpRequestMessage();
 
-            HttpRequestMessage requestMessage = new HttpRequestMessage();
             requestMessage.Version = new Version("2.0");
 
 

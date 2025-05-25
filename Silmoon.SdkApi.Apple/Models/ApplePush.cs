@@ -6,8 +6,8 @@ namespace Silmoon.SdkApi.Models
 {
     public class ApplePush
     {
-        public string AppId { get; set; }
-        public string DeviceToken { get; set; }
+        public required string AppId { get; set; }
+        public required string DeviceToken { get; set; }
         public string Title { get; set; }
         public string SubTitle { get; set; }
         public string Body { get; set; }
