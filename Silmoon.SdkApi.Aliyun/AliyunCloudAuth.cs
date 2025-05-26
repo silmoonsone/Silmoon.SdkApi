@@ -54,7 +54,7 @@ namespace Silmoon.SdkApi.Aliyun
             }
         }
 
-        public static StateSet<bool, InitFaceVerifyResponse> FaceVerifyInitial_PV_FV(string accessKeyId, string accessKeySecret, string orderId, long sceneId, string metaInfo, string userId, string name, string cardNo, byte[] imageData, string callbackUrl, bool enableVideo = false)
+        public static StateSet<bool, InitFaceVerifyResponse> FaceVerifyInitial_PV_FV(string accessKeyId, string accessKeySecret, string orderId, long sceneId, string metaInfo, string userId, string? name, string? cardNo, byte[] imageData, string callbackUrl, bool enableVideo = false)
         {
             var client = getClient(accessKeyId, accessKeySecret);
             InitFaceVerifyRequest initFaceVerifyRequest = new InitFaceVerifyRequest
@@ -64,8 +64,8 @@ namespace Silmoon.SdkApi.Aliyun
                 ProductCode = "PV_FV",
                 Model = "LIVENESS",
                 CertType = "IDENTITY_CARD",
-                //CertName = name,
-                //CertNo = cardNo,
+                CertName = name,
+                CertNo = cardNo,
                 ReturnUrl = callbackUrl,
                 MetaInfo = metaInfo,
                 FaceContrastPicture = Convert.ToBase64String(imageData),
@@ -84,7 +84,7 @@ namespace Silmoon.SdkApi.Aliyun
                 return false.ToStateSet<InitFaceVerifyResponse>(null, ex.Message);
             }
         }
-        public static StateSet<bool, InitFaceVerifyResponse> FaceVerifyInitial_PV_FV(string accessKeyId, string accessKeySecret, string orderId, long sceneId, string metaInfo, string userId, string name, string cardNo, string imageUrl, string callbackUrl, bool enableVideo = false)
+        public static StateSet<bool, InitFaceVerifyResponse> FaceVerifyInitial_PV_FV(string accessKeyId, string accessKeySecret, string orderId, long sceneId, string metaInfo, string userId, string? name, string? cardNo, string imageUrl, string callbackUrl, bool enableVideo = false)
         {
             var client = getClient(accessKeyId, accessKeySecret);
             InitFaceVerifyRequest initFaceVerifyRequest = new InitFaceVerifyRequest
@@ -94,8 +94,8 @@ namespace Silmoon.SdkApi.Aliyun
                 ProductCode = "PV_FV",
                 Model = "LIVENESS",
                 CertType = "IDENTITY_CARD",
-                //CertName = name,
-                //CertNo = cardNo,
+                CertName = name,
+                CertNo = cardNo,
                 ReturnUrl = callbackUrl,
                 MetaInfo = metaInfo,
                 FaceContrastPictureUrl = imageUrl,
@@ -114,7 +114,7 @@ namespace Silmoon.SdkApi.Aliyun
                 return false.ToStateSet<InitFaceVerifyResponse>(null, ex.Message);
             }
         }
-        public static StateSet<bool, InitFaceVerifyResponse> FaceVerifyInitial_PV_FV(string accessKeyId, string accessKeySecret, string orderId, long sceneId, string metaInfo, string userId, string name, string cardNo, string ossBucketName, string ossObjectName, string callbackUrl, bool enableVideo = false)
+        public static StateSet<bool, InitFaceVerifyResponse> FaceVerifyInitial_PV_FV(string accessKeyId, string accessKeySecret, string orderId, long sceneId, string metaInfo, string userId, string? name, string? cardNo, string ossBucketName, string ossObjectName, string callbackUrl, bool enableVideo = false)
         {
             var client = getClient(accessKeyId, accessKeySecret);
             InitFaceVerifyRequest initFaceVerifyRequest = new InitFaceVerifyRequest
@@ -124,8 +124,8 @@ namespace Silmoon.SdkApi.Aliyun
                 ProductCode = "PV_FV",
                 Model = "LIVENESS",
                 CertType = "IDENTITY_CARD",
-                //CertName = name,
-                //CertNo = cardNo,
+                CertName = name,
+                CertNo = cardNo,
                 ReturnUrl = callbackUrl,
                 MetaInfo = metaInfo,
                 OssBucketName = ossBucketName,
