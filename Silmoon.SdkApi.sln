@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36121.58 d17.14
+VisualStudioVersion = 17.14.36121.58
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Silmoon.SdkApi", "Silmoon.SdkApi\Silmoon.SdkApi.csproj", "{995ACB1E-2355-45F8-9BA0-74026424FECB}"
 EndProject
@@ -18,6 +18,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Silmoon.SdkApi.Apple", "Sil
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Testing", "Testing", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormsTesting", "WinFormsTesting\WinFormsTesting.csproj", "{015D2409-8696-416E-8024-2496EEBD00F1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Silmoon.SdkApi.Aliyun", "Silmoon.SdkApi.Aliyun\Silmoon.SdkApi.Aliyun.csproj", "{C84E972B-6ACE-4539-98B8-0E62FE5A3885}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Silmoon.AspNetCore.SdkApiTesting", "Silmoon.AspNetCore.SdkApiTesting\Silmoon.AspNetCore.SdkApiTesting.csproj", "{0197AAF9-2D6E-4CD4-B245-1EFD7BC8D455}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,9 +38,25 @@ Global
 		{531990B7-BC8F-438D-B364-236053CAE814}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{531990B7-BC8F-438D-B364-236053CAE814}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{531990B7-BC8F-438D-B364-236053CAE814}.Release|Any CPU.Build.0 = Release|Any CPU
+		{015D2409-8696-416E-8024-2496EEBD00F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{015D2409-8696-416E-8024-2496EEBD00F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{015D2409-8696-416E-8024-2496EEBD00F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{015D2409-8696-416E-8024-2496EEBD00F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C84E972B-6ACE-4539-98B8-0E62FE5A3885}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C84E972B-6ACE-4539-98B8-0E62FE5A3885}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C84E972B-6ACE-4539-98B8-0E62FE5A3885}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C84E972B-6ACE-4539-98B8-0E62FE5A3885}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0197AAF9-2D6E-4CD4-B245-1EFD7BC8D455}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0197AAF9-2D6E-4CD4-B245-1EFD7BC8D455}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0197AAF9-2D6E-4CD4-B245-1EFD7BC8D455}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0197AAF9-2D6E-4CD4-B245-1EFD7BC8D455}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{015D2409-8696-416E-8024-2496EEBD00F1} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{0197AAF9-2D6E-4CD4-B245-1EFD7BC8D455} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0B0A5906-2E20-4FE6-8720-81D20AF27E10}

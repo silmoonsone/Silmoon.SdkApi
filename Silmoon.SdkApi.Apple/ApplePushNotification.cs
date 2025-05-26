@@ -2,7 +2,7 @@
 using Jose.keys;
 using Newtonsoft.Json.Linq;
 using Silmoon.Models;
-using Silmoon.SdkApi.Models;
+using Silmoon.SdkApi.Apple.Models;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -12,7 +12,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Silmoon.SdkApi.Warpper.Apple
+namespace Silmoon.SdkApi.Apple
 {
     public class ApplePushNotification
     {

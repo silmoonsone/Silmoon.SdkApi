@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Silmoon.SdkApi.Models
+namespace Silmoon.SdkApi.Apple.Models
 {
     public class ApplePush
     {

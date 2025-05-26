@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>@ViewData["Title"] - Silmoon.AspNetCore.SdkApiTesting</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Silmoon.AspNetCore.SdkApiTesting.styles.css" asp-append-version="true" />
+    @* <link rel="stylesheet" href="~/css/sm-mobile-test.css" asp-append-version="true" /> *@
+    <link rel="stylesheet" href="~/css/sm-upload.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/_content/Silmoon.AspNetCore/css/metroui-confirm.css" />
+    <script src="~/lib/jquery/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="~/lib/jquery-ajax-unobtrusive/jquery.unobtrusive-ajax.min.js"></script>
+    <script src="~/lib/vue/vue.min.js"></script>
+    <script src="~/_content/Silmoon.AspNetCore/js/toast.js"></script>
+    <script src="~/_content/Silmoon.AspNetCore/js/common.js"></script>
+    <script src="~/_content/Silmoon.AspNetCore/js/metroui-confirm.js"></script>
+    <script src="~/js/sm-upload.js" asp-append-version="true"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <component type="typeof(Microsoft.AspNetCore.Components.Web.HeadOutlet)" render-mode="Server" />
+</head>
+<body>
+    @RenderBody()
+    @await RenderSectionAsync("Scripts", required: false)
+    @*<script src="~/_framework/blazor.server.js"></script>*@
+    @*<script src="~/lib/microsoft/signalr/dist/browser/signalr.js"></script>*@
+</body>
+</html>

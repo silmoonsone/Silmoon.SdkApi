@@ -1,0 +1,12 @@
+{
+  "apple": {
+    "apn": {
+      "appId": "",
+      "pushKeyId": "",
+      "pushKey": "",
+      "teamId": "",
+      "deviceToken": "",
+      "isDevelopment": false
+    }
+  }
+}
