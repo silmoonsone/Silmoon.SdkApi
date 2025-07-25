@@ -13,11 +13,11 @@
     <PackageReference Include="aliyun-net-sdk-afs" Version="1.0.1" />
     <PackageReference Include="aliyun-net-sdk-core" Version="1.6.2" />
     <PackageReference Include="Baidu.AI" Version="4.15.16" />
-    <PackageReference Include="MongoDB.Bson" Version="3.4.0" />
+    <PackageReference Include="MongoDB.Bson" Version="3.4.2" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
-    <PackageReference Include="Silmoon" Version="1.8.4" />
+    <PackageReference Include="Silmoon" Version="1.8.6" />
     <PackageReference Include="Silmoon.Data.MongoDB" Version="1.8.1" />
-    <PackageReference Include="Silmoon.Extension" Version="1.7.4" />
+    <PackageReference Include="Silmoon.Extension" Version="1.7.5" />
     <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
   </ItemGroup>
 
