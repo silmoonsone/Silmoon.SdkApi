@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Silmoon.SdkApi.Apple\Silmoon.SdkApi.Apple.csproj" />
+    <ProjectReference Include="..\Silmoon.SdkApi.Integrate\Silmoon.SdkApi.Integrate.csproj" />
     <ProjectReference Include="..\Silmoon.SdkApi\Silmoon.SdkApi.csproj" />
   </ItemGroup>
 

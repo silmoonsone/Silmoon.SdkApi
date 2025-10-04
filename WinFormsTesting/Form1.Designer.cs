@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             ctlAppleSdkTestButton = new Button();
+            ctlSendGridTestButton = new Button();
+            ctlResendTestButton = new Button();
             SuspendLayout();
             // 
             // ctlAppleSdkTestButton
@@ -41,11 +43,33 @@
             ctlAppleSdkTestButton.UseVisualStyleBackColor = true;
             ctlAppleSdkTestButton.Click += ctlAppleSdkTestButton_Click;
             // 
+            // ctlSendGridTestButton
+            // 
+            ctlSendGridTestButton.Location = new Point(93, 12);
+            ctlSendGridTestButton.Name = "ctlSendGridTestButton";
+            ctlSendGridTestButton.Size = new Size(75, 23);
+            ctlSendGridTestButton.TabIndex = 1;
+            ctlSendGridTestButton.Text = "SendGrid";
+            ctlSendGridTestButton.UseVisualStyleBackColor = true;
+            ctlSendGridTestButton.Click += ctlSendGridTestButton_Click;
+            // 
+            // ctlResendTestButton
+            // 
+            ctlResendTestButton.Location = new Point(174, 12);
+            ctlResendTestButton.Name = "ctlResendTestButton";
+            ctlResendTestButton.Size = new Size(75, 23);
+            ctlResendTestButton.TabIndex = 2;
+            ctlResendTestButton.Text = "Resend";
+            ctlResendTestButton.UseVisualStyleBackColor = true;
+            ctlResendTestButton.Click += ctlResendTestButton_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(ctlResendTestButton);
+            Controls.Add(ctlSendGridTestButton);
             Controls.Add(ctlAppleSdkTestButton);
             Name = "Form1";
             Text = "Form1";
@@ -55,5 +79,7 @@
         #endregion
 
         private Button ctlAppleSdkTestButton;
+        private Button ctlSendGridTestButton;
+        private Button ctlResendTestButton;
     }
 }

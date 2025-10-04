@@ -8,5 +8,11 @@
       "deviceToken": "",
       "isDevelopment": false
     }
+  },
+  "sendgrid": {
+    "apiKey": ""
+  },
+  "resend": {
+    "apiKey": ""
   }
 }

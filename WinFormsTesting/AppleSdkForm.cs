@@ -16,15 +16,9 @@ namespace WinFormsTesting
 {
     public partial class AppleSdkForm : Form
     {
-        JObject Config { get; set; }
         public AppleSdkForm()
         {
             InitializeComponent();
-
-            if (File.Exists("config.local.json"))
-                Config = JsonHelperV2.LoadJsonFromFile("config.local.json");
-            else
-                Config = JsonHelperV2.LoadJsonFromFile("config.json");
         }
 
         private async void ctlSubmitButton_Click(object sender, EventArgs e)
@@ -50,12 +44,12 @@ namespace WinFormsTesting
 
         private void AppleSdkForm_Load(object sender, EventArgs e)
         {
-            ctlAppIdTextBox.Text = Config["apple"]?["apn"]?["appId"].Value<string>();
-            ctlPushKeyIdTextBox.Text = Config["apple"]?["apn"]?["pushKeyId"].Value<string>();
-            ctlPushKeyTextBox.Text = Config["apple"]?["apn"]?["pushKey"].Value<string>();
-            ctlTeamIdTextBox.Text = Config["apple"]?["apn"]?["teamId"].Value<string>();
-            ctlDeviceTokenTextBox.Text = Config["apple"]?["apn"]?["deviceToken"].Value<string>();
-            ctlDevelopmentCheckBox.Checked = Config["apple"]?["apn"]?["isDevelopment"].Value<bool>() ?? false;
+            ctlAppIdTextBox.Text = Form1.Config["apple"]?["apn"]?["appId"].Value<string>();
+            ctlPushKeyIdTextBox.Text = Form1.Config["apple"]?["apn"]?["pushKeyId"].Value<string>();
+            ctlPushKeyTextBox.Text = Form1.Config["apple"]?["apn"]?["pushKey"].Value<string>();
+            ctlTeamIdTextBox.Text = Form1.Config["apple"]?["apn"]?["teamId"].Value<string>();
+            ctlDeviceTokenTextBox.Text = Form1.Config["apple"]?["apn"]?["deviceToken"].Value<string>();
+            ctlDevelopmentCheckBox.Checked = Form1.Config["apple"]?["apn"]?["isDevelopment"].Value<bool>() ?? false;
         }
     }
 }
