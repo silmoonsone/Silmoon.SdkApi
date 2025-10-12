@@ -1,7 +1,7 @@
 ﻿using Resend;
 using Silmoon.Extension;
 using Silmoon.Models;
-using Silmoon.SdkApi.Integrate.Models;
+using Silmoon.SdkApi.Integration.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +9,7 @@ using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Silmoon.SdkApi.Integrate.Mail
+namespace Silmoon.SdkApi.Integration.Mail
 {
     public class ResendSdk
     {

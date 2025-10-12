@@ -1,7 +1,7 @@
 using Newtonsoft.Json.Linq;
 using Silmoon.Extension;
-using Silmoon.SdkApi.Integrate.Mail;
-using Silmoon.SdkApi.Integrate.Models;
+using Silmoon.SdkApi.Integration.Mail;
+using Silmoon.SdkApi.Integration.Models;
 using System.Diagnostics;
 using System.Net.Mail;
 using System.Threading.Tasks;

@@ -24,7 +24,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Silmoon.SdkApi.Aliyun", "Si
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Silmoon.AspNetCore.SdkApiTesting", "Silmoon.AspNetCore.SdkApiTesting\Silmoon.AspNetCore.SdkApiTesting.csproj", "{0197AAF9-2D6E-4CD4-B245-1EFD7BC8D455}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Silmoon.SdkApi.Integrate", "Silmoon.SdkApi.Integrate\Silmoon.SdkApi.Integrate.csproj", "{5A7A610A-FBA3-4079-951A-F602D93F1150}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Silmoon.SdkApi.Integration", "Silmoon.SdkApi.Integration\Silmoon.SdkApi.Integration.csproj", "{5A7A610A-FBA3-4079-951A-F602D93F1150}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,20 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Globalization;
 using System.Linq;
 using System.Net.Mail;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Silmoon.SdkApi.Integrate.Models
+namespace Silmoon.SdkApi.Integration.Models
 {
-    public class ActionMailParameters
+    public class VerifyCodeMailParameters
     {
         private static readonly Lazy<string> _templateCache = new Lazy<string>(() =>
         {
             var assembly = Assembly.GetExecutingAssembly();
-            var resourceName = "Silmoon.SdkApi.Integrate.HtmlTemplates.ActionNotificationTemplate.html";
+            var resourceName = "Silmoon.SdkApi.Integrate.HtmlTemplates.VerifyCodeTemplate.html";
 
             using var stream = assembly.GetManifestResourceStream(resourceName);
             if (stream == null)
@@ -31,7 +30,8 @@ namespace Silmoon.SdkApi.Integrate.Models
         public string AppName { get; set; }
         public string Username { get; set; }
         public string Action { get; set; }
-        public DateTime DateTime { get; set; }
+        public string VerifyCode { get; set; }
+        public int ExpireMinutes { get; set; }
         public string Email { get; set; }
 
         public string GetHtmlBody()
@@ -40,25 +40,23 @@ namespace Silmoon.SdkApi.Integrate.Models
             {
                 var template = _templateCache.Value;
 
-                // 格式化日期时间
-                var formattedDateTime = DateTime.ToString("yyyy年MM月dd日 HH:mm:ss", CultureInfo.GetCultureInfo("zh-CN"));
-
                 // 替换模板变量
                 return template
                     .Replace("{{AppName}}", AppName ?? "")
                     .Replace("{{Username}}", Username ?? "")
                     .Replace("{{Action}}", Action ?? "")
-                    .Replace("{{DateTime}}", formattedDateTime)
+                    .Replace("{{VerifyCode}}", VerifyCode ?? "")
+                    .Replace("{{ExpireMinutes}}", ExpireMinutes.ToString())
                     .Replace("{{Email}}", Email ?? "");
             }
             catch (Exception ex)
             {
-                throw new InvalidOperationException($"生成操作通知邮件HTML时发生错误: {ex.Message}", ex);
+                throw new InvalidOperationException($"生成验证码邮件HTML时发生错误: {ex.Message}", ex);
             }
         }
-        public static ActionMailParameters Create(MailAddress from, MailAddress to, string subject, string appName, string username, string action, DateTime dateTime, string email)
+        public static VerifyCodeMailParameters Create(MailAddress from, MailAddress to, string subject, string appName, string username, string action, string verifyCode, int expireMinutes, string email)
         {
-            return new ActionMailParameters
+            return new VerifyCodeMailParameters
             {
                 From = from,
                 To = to,
@@ -66,7 +64,8 @@ namespace Silmoon.SdkApi.Integrate.Models
                 AppName = appName,
                 Username = username,
                 Action = action,
-                DateTime = dateTime,
+                VerifyCode = verifyCode,
+                ExpireMinutes = expireMinutes,
                 Email = email,
             };
         }

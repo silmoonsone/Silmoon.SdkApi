@@ -13,6 +13,7 @@
             padding: 0;
             background-color: #f5f5f5;
         }
+
         .email-wrapper {
             width: 100%;
             max-width: 600px;
@@ -20,26 +21,31 @@
             background-color: #f5f5f5;
             padding: 20px;
         }
+
         .container {
             background-color: #ffffff;
             border-radius: 10px;
             padding: 40px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
+
         .header {
             margin-bottom: 30px;
         }
+
         .app-name {
             font-size: 24px;
             font-weight: bold;
             color: #2c3e50;
             margin-bottom: 10px;
         }
+
         .greeting {
             font-size: 18px;
             color: #34495e;
             margin-bottom: 30px;
         }
+
         .verify-code-section {
             background: linear-gradient(135deg, #0d6efd 0%, #0b5ed7 100%);
             border-radius: 12px;
@@ -48,12 +54,14 @@
             margin: 25px 0;
             color: white !important;
         }
+
         .verify-code-label {
             font-size: 16px;
             margin-bottom: 15px;
             opacity: 0.9;
             color: white !important;
         }
+
         .verify-code {
             font-size: 32px;
             font-weight: bold;
@@ -70,12 +78,7 @@
             -ms-user-select: all;
             color: white !important;
         }
-        .copy-hint {
-            font-size: 13px;
-            opacity: 0.8;
-            margin-top: 10px;
-            color: white !important;
-        }
+
         .expire-info {
             background-color: #fff3cd;
             border: 1px solid #ffeaa7;
@@ -84,11 +87,13 @@
             margin: 20px 0;
             text-align: center;
         }
+
         .expire-text {
             color: #856404;
             font-weight: bold;
             font-size: 15px;
         }
+
         .email-info {
             background-color: #e8f4fd;
             border-left: 4px solid #3498db;
@@ -96,6 +101,7 @@
             margin: 15px 0;
             border-radius: 0 6px 6px 0;
         }
+
         .footer {
             text-align: center;
             margin-top: 30px;
@@ -104,31 +110,36 @@
             color: #7f8c8d;
             font-size: 14px;
         }
+
         .security-tips {
             background-color: #f8f9fa;
             border-radius: 8px;
             padding: 20px;
             margin: 20px 0;
         }
-        .security-tips h4 {
-            color: #e74c3c;
-            margin-top: 0;
-        }
-        .security-tips ul {
-            margin: 10px 0;
-            padding-left: 20px;
-        }
-        .security-tips li {
-            margin: 5px 0;
-            color: #555;
-        }
-        
+
+            .security-tips h4 {
+                color: #e74c3c;
+                margin-top: 0;
+            }
+
+            .security-tips ul {
+                margin: 10px 0;
+                padding-left: 20px;
+            }
+
+            .security-tips li {
+                margin: 5px 0;
+                color: #555;
+            }
+
         /* 邮件客户端兼容性 */
         @media only screen and (max-width: 600px) {
             .email-wrapper {
                 width: 100% !important;
                 padding: 10px !important;
             }
+
             .container {
                 padding: 20px !important;
             }
@@ -141,25 +152,24 @@
             <div class="header">
                 <div class="app-name">{{AppName}}</div>
             </div>
-            
+
             <div class="greeting">
                 你好，{{Username}}！
             </div>
-            
+
             <div class="verify-code-section">
                 <div class="verify-code-label">验证码用于 {{Action}}</div>
                 <div class="verify-code">{{VerifyCode}}</div>
-                <div class="copy-hint">点击验证码可选择复制</div>
             </div>
-            
+
             <div class="expire-info">
                 <div class="expire-text">⏰ 请在 {{ExpireMinutes}} 分钟内使用此验证码</div>
             </div>
-            
+
             <div class="email-info">
                 <strong>📧 邮箱地址：</strong>{{Email}}
             </div>
-            
+
             <div class="security-tips">
                 <h4>🔒 安全提示</h4>
                 <ul>
@@ -168,7 +178,7 @@
                     <li>如非本人操作，请忽略此邮件</li>
                 </ul>
             </div>
-            
+
             <div class="footer">
                 <p>此邮件由系统自动发送，请勿回复</p>
                 <p>© {{AppName}} - 安全验证服务</p>
