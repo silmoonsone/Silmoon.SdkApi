@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net9.0</TargetFramework>
+    <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>annotations</Nullable>
   </PropertyGroup>
@@ -37,7 +37,7 @@
 
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
-    <PackageReference Include="Silmoon.Extension" Version="2.0.2" />
+    <PackageReference Include="Silmoon.Extension" Version="2.0.3" />
     <PackageReference Include="jose-jwt" Version="5.2.0" />
   </ItemGroup>
 
