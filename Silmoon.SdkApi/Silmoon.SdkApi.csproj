@@ -6,7 +6,7 @@
 
   <PropertyGroup>
     <PackageId>Silmoon.SdkApi</PackageId>
-    <Version>0.0.9</Version>
+    <Version>0.0.10</Version>
     <Authors>SILMOON</Authors>
     <Company>SILMOON LLC</Company>
     <Description>Silmoon SDK</Description>
@@ -35,7 +35,7 @@
 
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
-    <PackageReference Include="Silmoon.Extension" Version="2.0.3" />
+    <PackageReference Include="Silmoon.Extension" Version="2.0.4" />
     <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
   </ItemGroup>
 
