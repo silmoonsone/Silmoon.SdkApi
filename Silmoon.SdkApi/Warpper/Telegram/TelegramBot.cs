@@ -35,6 +35,7 @@ namespace Silmoon.SdkApi.Warpper.Telegram
         /// 收到新消息时触发（仅文本消息）
         /// </summary>
         public event EventHandler<TelegramMessageReceivedEventArgs> OnMessage;
+        //public event Func<object, TelegramMessageReceivedEventArgs, Task> OnMessage;
 
         private string ApiUrl => $"{ApiBaseUrl}{BotKey}";
 

@@ -5,10 +5,10 @@ var configFilePath = AppContext.BaseDirectory + "config.local.json";
 if (!File.Exists(configFilePath)) configFilePath = AppContext.BaseDirectory + "config.json";
 var jsonConfig = JsonHelperV2.LoadJsonFromFile(configFilePath);
 
+
+
 string? BotKey = jsonConfig.Value<string>("telegram_bot_key");
-
 TelegramBot bot = new TelegramBot(BotKey);
-
 string chatId = string.Empty;
 bot.OnMessage += async (s, e) =>
 {
