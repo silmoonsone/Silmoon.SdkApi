@@ -35,7 +35,7 @@
     <PackageReference Include="Silmoon.AspNetCore.Extension" Version="2.0.1" />
     <PackageReference Include="Silmoon.AspNetCore.Blazor" Version="2.0.2" />
     <PackageReference Include="Silmoon.Data.MongoDB" Version="2.0.0" />
-    <PackageReference Include="Silmoon.Extension" Version="2.0.4" />
+    <PackageReference Include="Silmoon.Extension" Version="2.0.5" />
     <PackageReference Include="Silmoon.Graphics" Version="0.0.2" />
     <PackageReference Include="Silmoon.Net" Version="2.0.1" />
   </ItemGroup>
