@@ -1,5 +1,5 @@
 ﻿using AlibabaCloud.SDK.Cloudauth20190307.Models;
-using Silmoon.Extension;
+using Silmoon.Extensions;
 using Silmoon.Models;
 using Silmoon.Secure;
 using System;

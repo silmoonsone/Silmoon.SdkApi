@@ -1,5 +1,5 @@
 using Newtonsoft.Json.Linq;
-using Silmoon.Extension;
+using Silmoon.Extensions;
 using Silmoon.SdkApi.Integration.Mail;
 using Silmoon.SdkApi.Integration.Models;
 using System.Diagnostics;

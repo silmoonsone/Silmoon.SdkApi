@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json.Linq;
 using SendGrid;
 using SendGrid.Helpers.Mail;
-using Silmoon.Extension;
+using Silmoon.Extensions;
 using Silmoon.Models;
 using Silmoon.Secure;
 using System;

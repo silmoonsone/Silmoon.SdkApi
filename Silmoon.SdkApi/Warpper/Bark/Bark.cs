@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
-using Silmoon.Extension;
-using Silmoon.Extension.Http;
+using Silmoon.Extensions;
+using Silmoon.Extensions.Http;
 using System;
 using System.Collections.Generic;
 using System.Net.Http;

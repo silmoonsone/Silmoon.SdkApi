@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.DataProtection;
 using Microsoft.AspNetCore.Mvc;
 using Silmoon.AspNetCore.Binders;
 using Silmoon.AspNetCore.Blazor.Extensions;
-using Silmoon.AspNetCore.Extension.Binders;
+using Silmoon.AspNetCore.Extensions.Binders;
 using Silmoon.AspNetCore.Extensions;
 using Silmoon.AspNetCore.SdkApiTesting;
 using Silmoon.AspNetCore.SdkApiTesting.Components;

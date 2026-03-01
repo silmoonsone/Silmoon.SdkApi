@@ -1,5 +1,5 @@
 ﻿using Newtonsoft.Json;
-using Silmoon.Extension;
+using Silmoon.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Text;

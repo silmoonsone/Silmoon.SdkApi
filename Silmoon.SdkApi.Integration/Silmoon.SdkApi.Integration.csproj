@@ -8,7 +8,7 @@
 
   <PropertyGroup>
     <PackageId>Silmoon.SdkApi.Integration</PackageId>
-    <Version>0.0.0-alpha.0</Version>
+    <Version>0.1.0</Version>
     <Authors>SILMOON</Authors>
     <Company>SILMOON LLC</Company>
     <Description>Silmoon SDK</Description>
@@ -38,8 +38,8 @@
   <ItemGroup>
     <PackageReference Include="Resend" Version="0.2.1" />
     <PackageReference Include="SendGrid" Version="9.29.3" />
-    <PackageReference Include="Silmoon" Version="2.0.9" />
-    <PackageReference Include="Silmoon.Extension" Version="2.0.5" />
+    <PackageReference Include="Silmoon" Version="3.0.0" />
+    <PackageReference Include="Silmoon.Extensions" Version="3.0.0" />
   </ItemGroup>
 
   <ItemGroup>

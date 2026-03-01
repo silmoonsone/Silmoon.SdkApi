@@ -4,7 +4,7 @@ using Silmoon.AspNetCore.Interfaces;
 using Silmoon.AspNetCore.SdkApiTesting.Models;
 using Silmoon.AspNetCore.SdkApiTesting.Services;
 using Silmoon.Data.MongoDB;
-using Silmoon.Extension;
+using Silmoon.Extensions;
 using Silmoon.Models;
 using Silmoon.Secure;
 using System.Linq.Expressions;

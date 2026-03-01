@@ -1,5 +1,5 @@
 ﻿using Newtonsoft.Json.Linq;
-using Silmoon.Extension;
+using Silmoon.Extensions;
 using Silmoon.SdkApi.Apple;
 using Silmoon.SdkApi.Apple.Models;
 using System;

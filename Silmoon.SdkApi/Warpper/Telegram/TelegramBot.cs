@@ -1,7 +1,7 @@
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-using Silmoon.Extension;
-using Silmoon.Extension.Http;
+using Silmoon.Extensions;
+using Silmoon.Extensions.Http;
 using Silmoon.Models;
 using System;
 using System.Net.Http;

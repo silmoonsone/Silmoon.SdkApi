@@ -1,5 +1,5 @@
-﻿using Silmoon.Extension.Enums;
-using Silmoon.Extension.Interfaces;
+﻿using Silmoon.Extensions.Enums;
+using Silmoon.Extensions.Interfaces;
 
 namespace Silmoon.AspNetCore.SdkApiTesting.Models
 {
