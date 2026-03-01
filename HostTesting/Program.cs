@@ -2,8 +2,8 @@
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Silmoon.AI.HostingTest.Services;
-using Silmoon.AspNetCore.Extensions;
-using Silmoon.AspNetCore.Interfaces;
+using Silmoon.Extensions.Hosting.Extensions;
+using Silmoon.Extensions.Hosting.Interfaces;
 
 var builder = Host.CreateApplicationBuilder(args);
 
