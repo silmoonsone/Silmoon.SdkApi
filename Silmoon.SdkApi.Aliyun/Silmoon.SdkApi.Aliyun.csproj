@@ -8,7 +8,7 @@
 
   <PropertyGroup>
     <PackageId>Silmoon.SdkApi.Aliyun</PackageId>
-    <Version>0.1.0</Version>
+    <Version>0.1.1</Version>
     <Authors>SILMOON</Authors>
     <Company>SILMOON LLC</Company>
     <Description>Silmoon SDK</Description>
@@ -45,7 +45,6 @@
     <PackageReference Include="MongoDB.Bson" Version="3.6.0" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
     <PackageReference Include="Silmoon" Version="3.0.0" />
-    <PackageReference Include="Silmoon.Data.MongoDB" Version="3.0.0" />
     <PackageReference Include="Silmoon.Extensions" Version="3.0.0" />
     <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
   </ItemGroup>
