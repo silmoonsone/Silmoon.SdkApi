@@ -1,5 +1,5 @@
 ﻿using Microsoft.Extensions.Hosting;
-using Silmoon.AspNetCore.Interfaces;
+using Silmoon.Extensions.Hosting.Interfaces;
 using Silmoon.Extensions;
 using Silmoon.SdkApi.Warpper.Telegram;
 using System;
