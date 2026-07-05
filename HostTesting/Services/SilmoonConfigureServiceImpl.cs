@@ -18,7 +18,7 @@ namespace Silmoon.AI.HostingTest.Services
         public SilmoonConfigureServiceImpl(IOptions<SilmoonConfigureServiceOption> options, ILogger<ISilmoonConfigureService> logger) : base(options)
         {
             Logger = logger;
-            Logger.LogInformation($"当前配置文件{CurrentConfigFilePath}");
+            Logger.LogInformation($"当前配置文件{CurrentConfigFile}");
         }
     }
 }
