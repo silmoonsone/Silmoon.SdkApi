@@ -7,7 +7,7 @@ var jsonConfig = JsonHelperV2.LoadJsonFromFile(configFilePath);
 
 
 
-string? BotKey = jsonConfig.Value<string>("telegram_bot_key");
+string? BotKey = jsonConfig.Value<string>("telegramBotKey");
 TelegramBot bot = new TelegramBot(BotKey);
 string chatId = string.Empty;
 bot.OnMessage += async (s, e) =>
@@ -18,7 +18,7 @@ bot.OnMessage += async (s, e) =>
     await Task.Delay(1000);
     var replyResult = await bot.SendMessageAsync(e.Message.ChatId, "Echo: " + e.Message.Text);
     Console.WriteLine($"Sent reply to {e.ChatId}, result: {replyResult.ToJsonString()}");
-    bot.StopPolling();
+    //bot.StopPolling();
 };
 
 await bot.StartPollingAsync();

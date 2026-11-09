@@ -20,7 +20,7 @@ namespace HostTesting.Services
         }
         public Task StartAsync(CancellationToken cancellationToken)
         {
-            bot = new TelegramBot(SilmoonConfigureService.ConfigJson.Value<string>("telegram_bot_key"));
+            bot = new TelegramBot(SilmoonConfigureService.ConfigJson.Value<string>("telegramBotKey"));
             bot.OnMessage += Bot_OnMessage;
             _ = bot.StartPollingAsync(cancellationToken: cancellationToken);
             return Task.CompletedTask;
